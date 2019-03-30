@@ -2,9 +2,17 @@ import numpy as np
 from itertools import zip_longest
 
 def read_history():
+    #Reads the history file and generates a list
     hist_file = open("history.txt", "r")
-    hist_content = hist_file.read()[6:].split()
+    hist_content = hist_file.read().split()
+    No_Customers = hist_content[0]
+    No_Items = hist_content[1]
+    No_Trans = hist_content[2]
+    hist_content.pop(0)
+    hist_content.pop(0)
+    hist_content.pop(0)
     hist_file.close()
+
     return hist_content
 
 def read_cart():
@@ -34,12 +42,7 @@ def entries():
     hist_list = read_history()
     count = 0
     for i in hist_list:
-        if i == hist_list[:]:
-            count += 0
-        elif i != hist_list[:]:
-            count += 1
-        else:
-            print("What Happened!")
+        hist_list[]
     print(count)
 
 def cart_calculator():
@@ -48,8 +51,8 @@ def cart_calculator():
 
 
 hist_list = read_history()
-cart_list = read_cart()
 print(hist_list)
+cart_list = read_cart()
 print(cart_list)
 entries()
 calculate_angle()
